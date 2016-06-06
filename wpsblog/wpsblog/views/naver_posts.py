@@ -9,5 +9,5 @@ def naver_posts_list(request):
         "naver_posts/list.html",
         {
             "naver_posts": NaverPost.objects.all(),
-        }
+        },
     )
