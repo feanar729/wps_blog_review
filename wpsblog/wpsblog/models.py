@@ -21,7 +21,6 @@ class Post(models.Model):
 
 
 class NaverPost(models.Model):
-    
     keyword = models.CharField(
         max_length=16,
     )
