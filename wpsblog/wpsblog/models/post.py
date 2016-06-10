@@ -7,6 +7,10 @@ class Post(models.Model):
         max_length=120,
     )
     content = models.TextField()
+    image = models.ImageField(
+        blank=True,
+        null=True,
+    )
 
     def __str__(self):
         return self.title
@@ -26,19 +30,3 @@ class Post(models.Model):
                 "post_id": self.id,
             }
         )
-
-
-class NaverPost(models.Model):
-    keyword = models.CharField(
-        max_length=16,
-    )
-
-    title = models.CharField(
-        max_length=256,
-    )
-    content = models.TextField()
-    thumbnail_image_url = models.URLField()
-    original_url = models.URLField()
-
-    def __str__(self):
-        return self.title
